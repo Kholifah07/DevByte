@@ -38,14 +38,6 @@ class VideosRepository(private val database: VideosDatabase) {
         it.asDomainModel()
     }
 
-    /**
-     * Refresh the videos stored in the offline cache.
-     *
-     * This function uses the IO dispatcher to ensure the database insert database operation
-     * happens on the IO dispatcher. By switching to the IO dispatcher using `withContext` this
-     * function is now safe to call from any thread including the Main thread.
-     *
-     */
     // digunakan untuk refresh video
     suspend fun refreshVideos() {
         // ketika di refrash aplikasi akan di disable
