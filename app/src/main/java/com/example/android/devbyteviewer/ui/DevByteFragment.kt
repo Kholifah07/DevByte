@@ -135,7 +135,7 @@ class DevByteFragment : Fragment() {
     }
 
     /**
-     * Method for displaying a Toast error message for network errors.
+     * Method digunakan untuk menapilkan pesan eror pada jaringan
      */
     private fun onNetworkError() {
         if(!viewModel.isNetworkErrorShown.value!!) {

@@ -38,7 +38,7 @@ class VideosRepository(private val database: VideosDatabase) {
         it.asDomainModel()
     }
 
-    // digunakan untuk refresh video
+    // digunakan untuk refresh video ketika oflline
     suspend fun refreshVideos() {
         // ketika di refrash aplikasi akan di disable
         withContext(Dispatchers.IO) {

@@ -35,7 +35,7 @@ interface VideoDao {
 }
 
 
-// merupakan kelas  DatabaseVideo merupakan Room
+// merupakan kelas  DatabaseVideo merupakan RoomDb
 @Database(entities = [DatabaseVideo::class], version = 1)
 abstract class VideosDatabase: RoomDatabase() {
     // digunakan untuk mengakses method dao
@@ -47,6 +47,7 @@ private lateinit var INSTANCE: VideosDatabase
 fun getDatabase(context: Context): VideosDatabase {
     synchronized(VideosDatabase::class.java) {
         if (!::INSTANCE.isInitialized) {
+            // instance room database
             INSTANCE = Room.databaseBuilder(context.applicationContext,
                     VideosDatabase::class.java,
                     "videos").build()

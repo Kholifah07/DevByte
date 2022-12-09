@@ -64,7 +64,7 @@ fun NetworkVideoContainer.asDomainModel(): List<DevByteVideo> {
 }
 
 
-// diguunakan untuk mengkonversikan objek dari network kedalam database
+// digunakan untuk mengkonversikan objek dari network kedalam database
 fun NetworkVideoContainer.asDatabaseModel(): List<DatabaseVideo> {
     return videos.map {
         DatabaseVideo(
